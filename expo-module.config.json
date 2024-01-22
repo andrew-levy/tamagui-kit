@@ -1,0 +1,14 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": [
+      "SwitchModule",
+      "SelectModule",
+      "ProgressModule",
+      "ColorPickerModule"
+    ]
+  },
+  "android": {
+    "modules": ["expo.modules.tamaguikit.TamaguiKitModule"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "tamagui-kit": ["../src/index"],
+      "tamagui-kit/*": ["../src/*"]
+    }
+  }
+}
