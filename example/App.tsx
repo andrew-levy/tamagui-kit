@@ -8,13 +8,11 @@ export default function App() {
   const [picker2, setPicker2] = useState(0);
   const [picker3, setPicker3] = useState(0);
   const [progress, setProgress] = useState(0.1);
-  const [accentColor, setAccentColor] = useState(accents[0]);
+  const [accentColor, setAccentColor] = useState("hsl(206, 100%, 50.0%)");
 
   return (
     <ScrollView>
       <View style={styles.container}>
-        {/* <ColorPicker color={accentColor} onSelect={(c) => setAccentColor(c)} /> */}
-
         <ColorPicker
           value={accentColor}
           label="Accent Color"
@@ -35,6 +33,7 @@ export default function App() {
           onValueChange={(value) => setToggle(value)}
           accent={accentColor}
         />
+
         <Text style={styles.title}>Menu Select: {picker1}</Text>
         <Select
           type="menu"
@@ -44,6 +43,7 @@ export default function App() {
           style={{ padding: 50 }}
           accent={accentColor}
         />
+
         <Text style={styles.title}>Segmented Select: {picker2}</Text>
         <Select
           type="segmented"
@@ -53,6 +53,7 @@ export default function App() {
           style={{ padding: 50 }}
           accent={accentColor}
         />
+
         <Text style={styles.title}>Wheel Select: {picker3}</Text>
         <Select
           type="wheel"
@@ -62,6 +63,7 @@ export default function App() {
           style={{ padding: 50 }}
           accent={accentColor}
         />
+
         <Text style={styles.title}>Progress</Text>
         <Progress
           value={progress}
@@ -96,13 +98,3 @@ const styles = StyleSheet.create({
     width: "80%",
   },
 });
-
-const accents = [
-  "hsl(206, 100%, 50.0%)",
-  "hsl(336, 80.0%, 57.8%)",
-  "hsl(24, 94.0%, 50.0%)",
-  "hsl(48, 100%, 67.8%)",
-  "#32CD32",
-  "red",
-  "blue",
-];
